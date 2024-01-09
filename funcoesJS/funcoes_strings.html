@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funcoes JS</title>
+
+  <script>
+
+        var nome = 'sivaldo vieira de almeida '
+
+        //metodos e atributos
+        
+        //document.write( 'sivaldo vieira de almeida'.length)
+        document.write( nome.length)
+        document.write('<hr>')
+
+        //document.write( 'sivaldo vieira de almeida'.charAt(2))
+        document.write( nome.charAt(2))
+        document.write('<hr>')
+
+       
+        document.write( nome.indexOf('d'))
+        document.write( nome.indexOf('12'))//passar caracter que não existe , oretorno será -1
+        document.write('<hr>')
+
+        //ira repetir todo o elemento
+        document.write( nome.repeat(1))
+        document.write('<hr>')
+
+        //substitui a string por outra indicada
+        document.write( nome.replace('sivaldo', 'Lucas'))
+        document.write('<hr>')
+
+        //passar posicao inicial que quer, e a final
+        document.write( nome.substr(0, 15))
+        document.write('<hr>')
+
+         //não precisa passar parametro, pegara toda string e converte
+         //para minusculas
+         document.write( nome.toLocaleLowerCase())
+         document.write('<hr>')
+
+
+        //não precisa passar parametro, pegara toda string e converte
+         //para maiusculas
+         document.write( nome.toLocaleUpperCase())
+         document.write('<hr>')
+
+          //remove espaços em branco ao redor da string
+         document.write( nome.trim())
+         document.write('<hr>')
+
+
+   
+  </script>
+
+</head>
+<body>
+  
+</body>
+</html>
