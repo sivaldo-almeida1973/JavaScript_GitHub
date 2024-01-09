@@ -14,7 +14,7 @@
        //escopo de bloco viusaliza variavel declarada o escopo global
        if (true) {
 
-        var serie2 = 'Game of Thrones' //variavel declarada dentro escopo de bloco
+        var serie2 = 'Game of Thrones' //variavel declarada dentro escopo de bloco sofre elevacao
         document.write(serie)
 
        }
@@ -26,13 +26,15 @@
        document.write('<br>')
 
 
+       //escopo da funcao tambem visualiza variavel do escopo global
        function escopoGlobal() {
-        var serie3 = 'The Walking Dead' //variavel declarada no escopo da funcao
+        var serie3 = 'The Walking Dead' //variavel declarada no escopo da funcao nao sofrerar elevacao para o escopo global
 
         document.write(serie)
         document.write(serie2)
        }
 
+       
        //precisa chamar a funcao
        escopoGlobal()
 
