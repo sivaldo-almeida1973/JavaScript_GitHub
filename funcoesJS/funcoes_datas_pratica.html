@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funcoes JS</title>
+
+  <script>
+       
+       var data = new Date()
+
+    
+      //  document.write('<hr> <h3>Data atual:</h3>')
+      //  //adicionar 1 dia da data
+      //  document.write(data.toString())// data atual em forma de string
+
+      //  document.write('<hr> <h3>acrescentar 1 dia na data</h3>')
+      //  data.setDate(data.getDate() +1)
+      //  document.write('<hr>')
+      //  document.write(data.toString())
+
+      //  document.write('<hr> <h3>tirar 1 dia da data</h3>')
+      //  //remover 1 dia da data
+      //  document.write(data.toString())// data atual em forma de string
+      //  data.setDate(data.getDate() -1)
+      //  document.write('<hr>')
+      //  document.write(data.toString())
+       
+      //  document.write('<hr> <h3>Acrescentar mes</h3>')
+      //  //acrescentar mes da data
+      //  document.write(data.toString())// data atual em forma de string
+      //  data.setMonth(data.getMonth() -1)
+      //  document.write('<hr>')
+      //  document.write(data.toString())
+
+      //  document.write('<hr><h3>Remover Mes:</h3>')
+      //  //remover mes da data
+      //  document.write(data.toString())// data atual em forma de string
+      //  data.setMonth(data.getMonth() -1)
+      //  document.write('<hr>')
+      //  document.write(data.toString())
+ 
+
+      //  document.write('<hr><h3>acrescentar 1 Ano:</h3>')
+      //  //remover mes da data
+      //  document.write(data.toString())// data atual em forma de string
+      //  data.setFullYear(data.getFullYear() +1)
+      //  document.write('<hr>')
+      //  document.write(data.toString())
+ 
+
+      //  document.write('<hr><h3>Remover 1 Ano:</h3>')
+      //  //remover mes da data
+      //  document.write(data.toString())// data atual em forma de string
+      //  data.setFullYear(data.getFullYear() -1)
+      //  document.write('<hr>')
+      //  document.write(data.toString())
+
+
+      //Calculo entre duas datas diferentes
+
+      //  dat: 15/01/2017
+      var data1 = new Date(2017, 0, 15)
+
+
+      //  dat: 09/01/2023
+      var data2 = new Date(2023, 0, 9)
+
+      document.write(data1.toString())
+      document.write('<hr/>')
+      document.write(data2.toString())
+
+      document.write('<hr/>')
+      //casting das datas
+
+      //recupera a data desde janeiro de 1970 em milissegundos
+      document.write(data1.getTime())
+      document.write('<hr/>')
+      document.write(data2.getTime())
+
+      // 1 janeiro de 1970
+
+      document.write('<hr/>')
+      //fazer calculos da diferença enter as datas 1 e 2
+      //Math.abs(converte um numero negtivo para positivo)
+
+      var milissegundos_entre_datas = Math.abs(data1.getTime() - data2.getTime(milissegundos_entre_datas))
+      
+
+
+      document.write('<hr/>')
+      // 1 dia 24 horas, cada hora 60 minutos,
+      // cada minuto 60 segundos
+      //cada 1 segundo, tem mil milissegundos
+
+
+      var milissegundos_por_dia = (1*24*60*60*1000)
+      //então quantos milisegundos temos em 1 dia ?
+      document.write('1 dia tem: ' + milissegundos_por_dia + 'milissegundos')
+
+
+      document.write('<hr/>')
+      //Math.ceil arrredonda a data
+      document.write('A diferença entre ' + data1 + 'e' + data2 + ' é ' + Math.ceil(milissegundos_entre_datas / milissegundos_por_dia)+ ' dias')
+ 
+
+     
+  </script>
+
+</head>
+<body>
+  
+</body>
+</html>
