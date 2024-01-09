@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funcoes JS</title>
+
+  <script>
+
+        function soma(a, b) {
+          b = b === undefined ? 0 : b //atribui valor 0 ao b
+          return a + b 
+        }
+
+       
+
+        console.log(soma(7, 7))
+
+         //mesmo fornecendo parametros a mais não tera erro(JS)
+        console.log(soma(7, 15,19,10))//desconsidera o que tiver a mais
+
+        //nesse caso( undefind) parametros a menos
+        console.log(soma(7))
+
+        console.log(soma())
+   
+  </script>
+
+</head>
+<body>
+  
+</body>
+</html>
