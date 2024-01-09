@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funcoes JS</title>
+
+  <script>
+        //funcao principal
+        function exibirArtigo(id, callbackSucsso, callbackErro) {
+          //logica da funacao exibirArtigo
+
+          if(true) {
+            callbackSucsso('Funcoes de calback em JS', 'Funçoes de callback são .....')
+          }else {
+            callbackErro('Erro ao recuperar os dados!')
+          }
+          
+        }
+      
+        //exibirArtigo(1, function(){...}, function() {...})
+
+        //encapsular funcoes anonimas dentro de variaveis, e encaminhar essas variaveis sendo referencia para as funcoes
+
+        var callbackSucsso = function(titulo, descricao) {  
+          document.write('<h1>' + titulo + '</h1>')
+          document.write('<hr>')
+          document.write('<p>' + descricao + '</p>')
+
+        }
+
+        var callbackErro = function(erro) {  
+          document.write('<p><b>Erro:</b>' + erro + '</h1>')
+
+        }
+
+      
+        //chamada da funcao exibirArtigo (usando como parametros as variaveis da s funcoes de callback)
+        exibirArtigo(1, callbackSucsso, callbackErro)
+   
+  </script>
+
+</head>
+<body>
+  
+</body>
+</html>
