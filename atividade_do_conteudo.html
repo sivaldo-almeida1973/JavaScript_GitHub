@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Github</title>
+
+
+  <script>
+
+      var nome = prompt('Digite seu nome: ')
+      var altura = prompt('Digite sua altura em centimetros: ')
+      var peso = prompt('Digite seu peso: ')
+
+      //converte as cadeias de caracteres para dados do tipo float 
+
+      var altura = parseFloat(altura)
+      var peso = parseFloat(peso)
+
+      //converter altura de centimetros para metros
+      altura = altura / 100
+
+      //calculo do IMC
+      var imc = peso/(altura*altura)
+
+      //teste condiconais para classificar por peso
+
+      var cassificacao = '';
+
+      if (imc < 16) {
+        classificacao = 'Baixo peso, muito grave'
+
+      }else if (imc >= 16 && imc <= 16.99) {
+        classificacao = 'Baixo peso, Grave'
+
+      }else if (imc >= 17 && imc <= 18.49) {
+        classificacao = 'Baixo peso'
+
+      }else if (imc >= 18.50 && imc <= 24.99) {
+        classificacao = 'Peso normal'
+
+      }else if (imc >= 25 && imc <= 29.99) {
+        classificacao = 'Sobrepeso'
+      
+      }else if (imc >= 30 && imc <= 34.99) {
+        classificacao = 'Obesidade grau I'
+
+      }else if (imc >= 35 && imc <= 39.99) {
+        classificacao = 'Obesidade grau II'
+
+      }else {
+        classificacao ='Obesidade grau III'
+      }
+
+      
+      document.write('Nome: ' + nome + ' posui indice de massa corporal ' + imc + ' sendo classificado como ' + classificacao)
+
+
+  
+  </script>
+
+</head>
+<body>
+    
+  
+</body>
+</html>
