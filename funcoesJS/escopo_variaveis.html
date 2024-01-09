@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funcoes JS</title>
+
+  <script>
+       //escopo global.escopo da funcao , escopo de bloco
+
+       //escopo global
+       var serie = 'Global'
+
+       //escopo de bloco viusaliza variavel declarada o escopo global
+       if (true) {
+
+        var serie2 = 'Game of Thrones' //variavel declarada dentro escopo de bloco
+        document.write(serie)
+
+       }
+
+       //escopo global
+       document.write(serie2)
+
+
+       document.write('<br>')
+
+
+       function escopoGlobal() {
+        var serie3 = 'The Walking Dead' //variavel declarada no escopo da funcao
+
+        document.write(serie)
+        document.write(serie2)
+       }
+
+       //precisa chamar a funcao
+       escopoGlobal()
+
+       document.write('<br>')
+       document.write(serie3)//não teremos acesso por ter sido declarada no escopo da funcao
+
+      
+   
+  </script>
+
+</head>
+<body>
+  
+</body>
+</html>
