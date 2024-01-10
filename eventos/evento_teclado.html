@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos Mouse</title>
+
+    <style>
+
+      div {
+        background: rgb(217, 217, 218);
+        width: 150px;
+        height: 150px;
+      }
+      
+    </style>
+
+    <script>
+      
+      //onkeydown,onkeypress,onkeyup
+      function acao1() {
+        alert('evento disparado')
+      }
+
+      function acao2() {
+        alert('o cursor do mouse deixou a regiao do elemento')
+      }
+
+      function acao3() {
+        alert('o cursor do mouse deixou a regiao do elemento')
+      }
+
+
+
+    </script>
+</head>
+<body>
+    
+   
+    <input onkeydown="acao1()" type="text" >
+    <input onkeyup="acao2()" type="text" >
+    <input onkeypress="acao1()" type="text" >
+
+
+
+  
+</body>
+</html>
