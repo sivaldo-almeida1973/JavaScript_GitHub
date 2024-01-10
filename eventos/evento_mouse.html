@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos Mouse</title>
+
+    <style>
+
+      div {
+        background: rgb(217, 217, 218);
+        width: 150px;
+        height: 150px;
+      }
+      
+    </style>
+
+    <script>
+      
+      //onclick,ondbclick, onmouseup,onmouseover,onmouseout
+      function acao() {
+        alert('elemento foi clicado')
+      }
+
+      function acao2() {
+        alert('o cursor do mouse deixou a regiao do elemento')
+      }
+
+
+
+    </script>
+</head>
+<body>
+    <!-- dispara com 1 click: -->
+    <!-- <div onclick="acao()"">
+    
+    </div> -->
+
+
+    <!-- dispara quado der 2 click -->
+
+    <!-- <div ondblclick="acao()"">
+    
+    </div> -->
+
+
+    <!-- dispara ao soltar o click -->
+    <!-- <div onmouseup="acao()">
+    
+    </div> -->
+
+    <!-- colocar o curso do mouse sobre o elemento -->
+    <!-- <div onmouseover="acao()">
+    
+    </div> -->
+
+    <!-- saida do cusro do mouse do elemento -->
+    <!-- <div onmouseout="acao()">
+    
+    </div> -->
+
+    <div onclick="acao()"  onmouseout="acao2()">
+    
+    </div>
+
+
+  
+</body>
+</html>
