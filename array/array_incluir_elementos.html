@@ -5,32 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Curso JavaScript</title>
 
-  <script>
+    <script>
+          var lista_coisas = Array()
+  
+          lista_coisas['frutas'] = Array()
+          lista_coisas['pessoas'] = [] //array pessoas
 
-        var lista_frutas = Array()
+          //inserir no array   lista_coisas no indice array frutas
+          lista_coisas['frutas'].push('banana')//push no final
+          lista_coisas['frutas'].push('uva')
+          lista_coisas['frutas'].unshift('maçã')//no inicio
+          lista_coisas['pessoas'].unshift('Joao')//no inicio
+          lista_coisas['pessoas'].unshift('Julia')//no inicio
 
-        lista_frutas[0] = 'Banana'
-        lista_frutas[1] = 'Maçã'
-        lista_frutas[2] = 'uva'
-
+        // lista_frutas[0] = 'Banana'
+        // lista_frutas[1] = 'Maçã'
+        // lista_frutas[2] = 'uva'
         //incluir elementos no final do array
-        lista_frutas.push('manga')
+        // lista_frutas.push('uva')
 
 
          //incluir elementos no inicio do array
-         lista_frutas.unshift('pera')
+        //  lista_frutas.unshift('pera')
 
 
 
-        console.log(lista_frutas)
+        console.log(lista_coisas)
 
         //excluir no final do array
-        lista_frutas.pop()
-        console.log(lista_frutas)
-        //excluir no inicio do array
-        lista_frutas.shift()
+        // lista_frutas.pop()
 
-        console.log(lista_frutas)
+        // console.log(lista_frutas)
+        
+        //excluir no inicio do array
+        // lista_frutas.shift()
+
+        // console.log(lista_frutas)
        
       
 
