@@ -18,6 +18,12 @@ ajustaTamahoPalcoJogo()
  //inciar posicionamento do mosquito aleatorio=============
  //ira ocorrrer um erro (por isso encapsular dentro da funcao) e chamar ela no body
 function posicaoRandomica() {
+
+    //remover mosquito anterior caso exista
+    if( document.getElementById('mosquito')) {      
+      document.getElementById('mosquito').remove()
+    }
+   
      
     //Math.flor(arredonda pra baixo)  Math.random(gera numero aleatorio)
     var posicaoX = Math.floor( Math.random() * largura) - 90
@@ -38,6 +44,7 @@ function posicaoRandomica() {
     mosquito.style.left = posicaoX + 'px'
     mosquito.style.top = posicaoY + 'px'
     mosquito.style.position = 'absolute'
+    mosquito.id = 'mosquito'
    
     document.body.appendChild(mosquito)//aces o boby e inclui img(filho)
 
