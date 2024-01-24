@@ -19,9 +19,7 @@
            <img id="v3" src="imagens/coracao_cheio.png">
         </div>
 
-        <div class="cronometro">
-          Tempo Restante: ?
-        </div>
+        <div class="cronometro">Tempo Restante: <span id="cronometro"></span> </div>
         
     </div>
 
@@ -29,9 +27,9 @@
 
     <script>
 
-      posicaoRandomica()
-
-      setInterval(function() {
+      document.getElementById('cronometro').innerHTML = tempo
+    
+      var criaMosquito = setInterval(function() {
         posicaoRandomica()
       } , 2000)
 

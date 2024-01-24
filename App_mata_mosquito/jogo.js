@@ -3,6 +3,7 @@
 var altura = 0
 var largura = 0
 vidas = 1  // alterar o coracao
+var tempo = 10 //cronometro
 
 function ajustaTamahoPalcoJogo() {
   altura = window.innerHeight
@@ -11,12 +12,25 @@ function ajustaTamahoPalcoJogo() {
 
   console.log(altura,largura)
 }
-
-//chamada da funcao
+//chamada
 ajustaTamahoPalcoJogo()
 // fim da definicao da largura e altura=======================
 
- //inciar posicionamento do mosquito =============
+var cronometro = setInterval(function() {
+  tempo -= 1
+
+  if(tempo < 0) {
+    clearInterval(cronometro)
+    clearInterval(criaMosquito)
+    alert('vitoria')
+  } else {
+    document.getElementById('cronometro').innerHTML = tempo
+  }
+ 
+  
+}, 1000)
+
+
 
 function posicaoRandomica() {
 
