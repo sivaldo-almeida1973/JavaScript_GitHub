@@ -25,7 +25,7 @@ function posicaoRandomica() {
 
     //ajustar caso posicao seja = 0
     posicaoX = posicaoX < 0 ? 0 : posicaoX
-    posicaoX = posicaoY < 0 ? 0 : posicaoY
+    posicaoY = posicaoY < 0 ? 0 : posicaoY
 
     console.log(posicaoX,posicaoY)
 
@@ -33,12 +33,47 @@ function posicaoRandomica() {
     //var mosquito guarda a referencia que quero adicionar no body
     var mosquito = document.createElement('img') //criar html(img)
     mosquito.src = 'imagens/mosquito.png' //src
-    mosquito.className = 'mosquito1' // referente ao estilo css da img
+    mosquito.className = tamanhoAleatorio() + ' ' + ladoAleatorio()//chama func tamanhoAleatorio
     //posicionamento domosquito
     mosquito.style.left = posicaoX + 'px'
-    mosquito.style.left = posicaoY + 'px'
+    mosquito.style.top = posicaoY + 'px'
     mosquito.style.position = 'absolute'
    
-    document.body.appendChild(mosquito) //acessar o boby e inclui img
+    document.body.appendChild(mosquito)//aces o boby e inclui img(filho)
 
+  
+  
+
+}
+
+//controla o tamanho do mosquito
+
+function tamanhoAleatorio() {
+     var classe = Math.floor(Math.random() * 3)
+     
+     switch(classe) {
+      case 0:
+        return 'mosquito1'
+
+      case 1:
+        return 'mosquito2'
+
+      case 2:
+        return 'mosquito3'
+     }
+}
+
+//ladoAleatorio(imagem)
+
+function ladoAleatorio() {
+  var classe = Math.floor(Math.random() * 2)
+  
+  switch(classe) {
+   case 0:
+     return 'ladoA'
+
+   case 1:
+     return 'ladoB'
+
+  }
 }
