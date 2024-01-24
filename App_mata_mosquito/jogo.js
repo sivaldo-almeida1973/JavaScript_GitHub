@@ -16,8 +16,8 @@ function ajustaTamahoPalcoJogo() {
 ajustaTamahoPalcoJogo()
 // fim da definicao da largura e altura=======================
 
- //inciar posicionamento do mosquito aleatorio=============
- //ira ocorrrer um erro (por isso encapsular dentro da funcao) e chamar ela no body
+ //inciar posicionamento do mosquito =============
+
 function posicaoRandomica() {
 
     //remover mosquito anterior caso exista
@@ -26,7 +26,7 @@ function posicaoRandomica() {
 
       //alterar o carocao para vazio e se for maior que 3 para o jogo
       if(vidas > 3) {
-        alert('Interrompe o jogo (Game over)')
+        window.location.href = 'fim_de_jogo.html'
       }else {
         document.getElementById('v' + vidas).src='imagens/coracao_vazio.png'
 
@@ -35,7 +35,6 @@ function posicaoRandomica() {
       }
     
     }
-   
      
     //Math.flor(arredonda pra baixo)  Math.random(gera numero aleatorio)
     var posicaoX = Math.floor( Math.random() * largura) - 90
@@ -47,11 +46,10 @@ function posicaoRandomica() {
 
     console.log(posicaoX,posicaoY)
 
-    //criar o elemento html (img) para inserir imagem dinamicamente
-    //var mosquito guarda a referencia que quero adicionar no body
+    //criar elementos html  dinamicamente
     var mosquito = document.createElement('img') //criar html(img)
     mosquito.src = 'imagens/mosquito.png' //src
-    mosquito.className = tamanhoAleatorio() + ' ' + ladoAleatorio()//chama func tamanhoAleatorio
+    mosquito.className = tamanhoAleatorio() + ' ' + ladoAleatorio()//chama 
     //posicionamento domosquito
     mosquito.style.left = posicaoX + 'px'
     mosquito.style.top = posicaoY + 'px'
