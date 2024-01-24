@@ -2,6 +2,7 @@
 //declarar as variaveis no escopo global
 var altura = 0
 var largura = 0
+vidas = 1  // alterar o coracao
 
 function ajustaTamahoPalcoJogo() {
   altura = window.innerHeight
@@ -22,6 +23,17 @@ function posicaoRandomica() {
     //remover mosquito anterior caso exista
     if( document.getElementById('mosquito')) {      
       document.getElementById('mosquito').remove()
+
+      //alterar o carocao para vazio e se for maior que 3 para o jogo
+      if(vidas > 3) {
+        alert('Interrompe o jogo (Game over)')
+      }else {
+        document.getElementById('v' + vidas).src='imagens/coracao_vazio.png'
+
+        vidas ++
+
+      }
+    
     }
    
      
@@ -45,6 +57,9 @@ function posicaoRandomica() {
     mosquito.style.top = posicaoY + 'px'
     mosquito.style.position = 'absolute'
     mosquito.id = 'mosquito'
+    mosquito.onclick = function() {
+      this.remove()//se clicar no mosquito antes de acabar o tempo
+    }
    
     document.body.appendChild(mosquito)//aces o boby e inclui img(filho)
 
