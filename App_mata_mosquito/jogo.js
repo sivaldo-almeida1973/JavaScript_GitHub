@@ -5,6 +5,24 @@ var largura = 0
 vidas = 1  // alterar o coracao
 var tempo = 10 //cronometro
 
+var criaMosquitoTempo = 1500 //tempo inicia 1500
+
+var nivel = window.location.search
+nivel = nivel.replace('?', '')//substituir ? por vazio ""
+
+//logica do tempo
+if(nivel === 'normal') {
+  //1500
+  criaMosquitoTempo = 1500
+
+}else if(nivel === 'difícil') {
+  //1000
+  criaMosquitoTempo = 1000
+}else if(nivel === 'chucknorris') {
+  //750
+  criaMosquitoTempo = 750
+}
+
 function ajustaTamahoPalcoJogo() {
   altura = window.innerHeight
   largura = window.innerWidth
@@ -16,14 +34,17 @@ function ajustaTamahoPalcoJogo() {
 ajustaTamahoPalcoJogo()
 // fim da definicao da largura e altura=======================
 
+//fluxo de vitoria==============================================
 var cronometro = setInterval(function() {
-  tempo -= 1
+  tempo -= 1  //e atribuir no texto html -1 a cada 1segundo
 
   if(tempo < 0) {
-    clearInterval(cronometro)
-    clearInterval(criaMosquito)
-    alert('vitoria')
+    clearInterval(cronometro)//para de crementar o cronometro
+    clearInterval(criaMosquito)//para de criar o mosquito
+    window.location.href = 'vitoria.html'
+    // alert('vitoria')
   } else {
+    //irá inserir o valor da (var tempo )dentro da tag span(html)
     document.getElementById('cronometro').innerHTML = tempo
   }
  
@@ -31,7 +52,7 @@ var cronometro = setInterval(function() {
 }, 1000)
 
 
-
+//fluxo de fim de jogo
 function posicaoRandomica() {
 
     //remover mosquito anterior caso exista

@@ -6,6 +6,7 @@
   <title>Document</title>
 
   <link rel="stylesheet" href="style.css">
+
   <script src="jogo.js"></script>
 </head>
 <body onresize="ajustaTamahoPalcoJogo()">
@@ -18,7 +19,7 @@
            <img id="v2" src="imagens/coracao_cheio.png">
            <img id="v3" src="imagens/coracao_cheio.png">
         </div>
-
+           <!-- atraves do id cronometro ira selecionar no js -->
         <div class="cronometro">Tempo Restante: <span id="cronometro"></span> </div>
         
     </div>
@@ -31,7 +32,7 @@
     
       var criaMosquito = setInterval(function() {
         posicaoRandomica()
-      } , 2000)
+      } , criaMosquitoTempo)
 
 
     </script>
