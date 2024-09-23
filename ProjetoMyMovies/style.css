@@ -32,6 +32,7 @@ header > h2 > i {
   display: flex;
   align-items: center;
   width: 50%;
+  justify-content: flex-end;
 }
 
 .movie-name-wrapper {
@@ -42,7 +43,7 @@ header > h2 > i {
 }
 
 .movie-year-wrapper {
-  width: 30%;
+ 
   display: flex;
   align-items: center;
   
@@ -75,11 +76,9 @@ header > h2 > i {
 }
 
 .movie-name-wrapper > label,
-.movie-year-wrapper > label{
+.movie-year-wrapper > label {
 
   font-weight: bold;
-
-
 }
 
 
