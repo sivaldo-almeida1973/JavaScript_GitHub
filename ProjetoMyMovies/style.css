@@ -1,9 +1,9 @@
 /*root = html*/
 :root {/*variaveis de cores*/
-  --primary-color: #415a77;
+  --primary-color: #012753;
   --light-primary: #e0e1dd ;
   --ligthest-color: #778da9;
-  --secondary-color: #669bbc;
+  --secondary-color: #056491;
   --light-secondary: #dda15e;
 
 }
@@ -21,7 +21,7 @@ header {
   align-items: center;
   padding: 1.5rem 1rem;
   background-color: var(--primary-color);
-  color: #dda15e;
+  color: #dad8d6;
 }
 
 header > h2 > i {
@@ -35,21 +35,64 @@ header > h2 > i {
 }
 
 .movie-name-wrapper {
-  width: 45%;
+  width: 65%;
+  display: flex;
+  align-items: center;
+
 }
 
 .movie-year-wrapper {
   width: 30%;
+  display: flex;
+  align-items: center;
+  
 }
 
 #search-button {
   width: 5%;
+ 
 }
 
 .movie-year-wrapper > input{
   max-width: 5rem;
+ 
 }
 
 
+.movie-name-wrapper > input{
+  width: 100%;
+ 
+}
+
+.movie-name-wrapper > input,
+.movie-year-wrapper > input{
+  margin:0 0.5rem;
+  border-radius: 8px;
+  padding: 0.3rem  0.2rem;
+  font-weight: bold;
 
 
+}
+
+.movie-name-wrapper > label,
+.movie-year-wrapper > label{
+
+  font-weight: bold;
+
+
+}
+
+
+#search-button {
+  all: unset;  /*retira confi padrao*/
+  padding: 0.3rem;
+  border: 2px solid #e0e1dd ;
+  border-radius: 10px;
+
+}
+
+#search-button:focus,
+#search-button:hover {
+  background-color: var(--secondary-color);
+
+}
