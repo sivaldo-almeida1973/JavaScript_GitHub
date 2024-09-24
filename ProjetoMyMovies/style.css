@@ -1,11 +1,9 @@
-/*root = html*/
 :root {/*variaveis de cores*/
-  --primary-color: #012753;
-  --light-primary: #e0e1dd ;
-  --ligthest-color: #778da9;
-  --secondary-color: #056491;
-  --light-secondary: #dda15e;
-
+  --primary-color: #29335c;
+  --light-primary: #3f4f8d ;
+  --ligthest-color: #e9ebd5;
+  --secondary-color: #774936;
+  --light-secondary: #c08972;
 }
 
 * {
@@ -107,6 +105,6 @@ main {
   text-align: center;
   padding: 2rem 0;
   /* margin: 2rem 0; */
-  background-color: var(--light-primary);
+  background-color: var(--ligthest-color);
   flex-grow: 1;
 }
