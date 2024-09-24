@@ -29,14 +29,14 @@
   position: absolute;
   z-index: 0;
   opacity: 0.4;
-  border: 1px solid red;
+  border: 1px solid rgb(0, 255, 76);
 
 
 }
 
 #modal-container {/*esta esta acima */
   z-index: 1;
-  border: 1px solid red;
+  border: 1px solid rgb(0, 60, 255);
   background-color: var(--ligthest-color);
   padding: 1rem 3rem;
   border-radius: 10px;
