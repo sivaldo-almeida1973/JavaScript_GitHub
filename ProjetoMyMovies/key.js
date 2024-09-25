@@ -1,1 +1,1 @@
-const key = "2afb4a46"
+const key = "2afb4a46";
