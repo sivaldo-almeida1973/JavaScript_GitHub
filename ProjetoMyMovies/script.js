@@ -14,6 +14,7 @@ async function searchButtonClickHandler() {
     if(data.Error) {
       throw new Error('Filme não encontrado!')
     }
+    //chamada da funcao createModal do modal.js
     createModal(data)
     overlay.classList.add('open');
 

@@ -42,7 +42,6 @@ function createModal(data) {
 }
 
 
-
 background.addEventListener("click", backgroundClickHandler);
 
 
