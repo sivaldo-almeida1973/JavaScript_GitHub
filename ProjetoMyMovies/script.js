@@ -11,16 +11,18 @@ async function searchButtonClickHandler() {
     const response = await fetch(url);
     const data = await response.json();
     console.log("data", data);
+    if(data.Error) {
+      throw new Error('Filme não encontrado!')
+    }
+    createModal(data)
     overlay.classList.add('open');
 
-  }catch (error) {
-    console.error(error.message);
-
+  }catch (error) {//usa bliblioteca de erros
+    notie.alert({type: "error", text: error.message});
   }
- 
 }
 
-
+//tratamento de erros(nome do filme)
 function movieNameParameterGenerator() {
   if(movieName.value === '') {
     throw new Error('O nome do filme deve ser informado');
@@ -28,7 +30,7 @@ function movieNameParameterGenerator() {
   return movieName.value.split(' ').join('+');
 }
 
-
+//tratamento de erros(ano do filme)
 function movieYearParameterGenarator() {
   if (movieYear.value === '') {
     return '';
