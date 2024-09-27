@@ -1,7 +1,13 @@
 const searchButton = document.getElementById("search-button");
 const overlay = document.getElementById("modal-overlay");
-const movieName = document.getElementById("movie-name")
-const movieYear = document.getElementById("movie-year")
+const movieName = document.getElementById("movie-name");
+const movieYear = document.getElementById("movie-year");
+const movieListContainer = document.getElementById('movie-list');
+
+//criar lista(funcao addToList no final)
+let movieList = [];
+
+
 
 //funcao que vai gerenciar o click no tutton de busca
 async function searchButtonClickHandler() {
@@ -42,6 +48,24 @@ function movieYearParameterGenarator() {
   return `&y=${movieYear.value}`;
 }
 
+//funcao que atualiza lista
+function addToList(movieObject) {
+  movieList.push(movieObject);
+}
+
+//atualizar a interface
+
+function updateUI(movieObject) {
+  movieListContainer.innerHTML += `<article>
+      <img 
+      src="${movieObject.Poster}" 
+      alt="Poster de ${movieObject.Title}.">
+
+      <button class="remove-button">
+        <i class="bi bi-trash"></i> Remover
+        </button>
+  </article>`;
+}
 
 //chama a funcao com o click no button
 searchButton.addEventListener("click", searchButtonClickHandler);
