@@ -22,9 +22,9 @@ async function searchButtonClickHandler() {
     }
     //chamada da funcao createModal do modal.js
     createModal(data)
+    //chamada da funcao abrir o modal
     overlay.classList.add('open');
-
-  }catch (error) {//usa bliblioteca de erros
+  }catch (error) {
     notie.alert({type: "error", text: error.message});
   }
 }
@@ -48,23 +48,42 @@ function movieYearParameterGenarator() {
   return `&y=${movieYear.value}`;
 }
 
-//funcao que atualiza lista
+//funcao que adiciona um filme no final da lista
 function addToList(movieObject) {
   movieList.push(movieObject);
 }
 
-//atualizar a interface
+//funcao que identifica se o filme ja esta na lista
+function isMovieAlreadyOnList(id) {
+  //funcao que  compara se id informado é igual a algum que ja esta na lista
+  function doesThisIdBelongToThisMovie(movieObject) {
+    return movieObject.imdbID === id;
 
+  }
+  //
+  return Boolean(movieList.find(doesThisIdBelongToThisMovie))
+
+}
+
+//atualizar a interface(depois de adicionar o filme)
 function updateUI(movieObject) {
-  movieListContainer.innerHTML += `<article>
+  movieListContainer.innerHTML += `<article id="movie-card-${movieObject.imdbID}">
       <img 
-      src="${movieObject.Poster}" 
-      alt="Poster de ${movieObject.Title}.">
-
-      <button class="remove-button">
+      src="${movieObject.Poster}"
+      alt="Poster de ${movieObject.Title}."
+      />
+      <button class="remove-button" onclick="{removeFilmFromList('${movieObject.imdbID}')}">
         <i class="bi bi-trash"></i> Remover
         </button>
   </article>`;
+}
+
+//remover filme da lista
+function removeFilmFromList(id) {
+//pega filme e verifica se o id é diferente 
+  movieList = movieList.filter(movie => movie.imdbID != id);
+  document.getElementById(`movie-card-${id}`).remove();
+
 }
 
 //chama a funcao com o click no button

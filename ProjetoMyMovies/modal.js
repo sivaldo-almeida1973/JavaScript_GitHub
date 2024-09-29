@@ -5,15 +5,23 @@ const modalContainer = document.getElementById('modal-container');
 //filme atual
 let currentMovie = {};
 
-
 function backgroundClickHandler() {
+  overlay.classList.remove("open");
+}
+
+//funcao que fecha o modal
+function closeModal() {
   overlay.classList.remove("open");
 }
 
 //adiciona o filme atual a lista(chamando as funcoes)
 function addCurrentMovieToList() {
-  addToList(currentMovie);
-  updateUI(currentMovie);
+  if (isMovieAlreadyOnList(currentMovie.imdbID)) {
+    notie.alert({type: "error", text: "Filme ja existe na sua lista!"});
+    return;
+  }
+  addToList(currentMovie);  //adiciona o filme atual a lista
+  updateUI(currentMovie);  //atualiza a interface
   closeModal();
 
 
@@ -23,7 +31,6 @@ function addCurrentMovieToList() {
 function createModal(data) {
   //atualiza o dodal
   currentMovie = data;
-
 
   modalContainer.innerHTML = `
       <h2 id="movie-title">${data.Title} - ${data.Year}</h2>
@@ -56,11 +63,6 @@ function createModal(data) {
       </section>
   
   `;
-}
-
-//funcao que fecha o modal
-function closeModal() {
-  overlay.classList.remove("open");
 }
 
 
