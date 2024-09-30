@@ -90,11 +90,10 @@ header > h2 > i {
 
 
 #search-button {
-  all: unset;  /*retira confi padrao*/
+  width: 20px;
   padding: 0.3rem;
-  border: 2px solid #e0e1dd ;
+  border: 2px solid var(--ligthest-color) ;
   border-radius: 10px;
-  width: 5%;
 
 }
 
@@ -124,6 +123,7 @@ main {
 #movie-list article {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 #movie-list article img{

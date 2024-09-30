@@ -81,11 +81,19 @@ function updateUI(movieObject) {
 
 //remover filme da lista
 function removeFilmFromList(id) {
-//pega filme e verifica se o id é diferente 
-  movieList = movieList.filter(movie => movie.imdbID != id);
-  document.getElementById(`movie-card-${id}`).remove();
-  updateLocalStorage();
+  notie.confirm({
+    text: 'Deseja remover o filme de sua lista?',
+    submitText: 'Sim',
+    cancelText: 'Não',
+    position: 'top',
+    submitCallback: function remove() {
+      //pega filme e verifica se o id é diferente 
+      movieList = movieList.filter(movie => movie.imdbID != id);
+      document.getElementById(`movie-card-${id}`).remove();
+      updateLocalStorage();
 
+    }
+  })
 }
 
 //funcao que atualiza a lista no localStorage quando adicionar o remover filme

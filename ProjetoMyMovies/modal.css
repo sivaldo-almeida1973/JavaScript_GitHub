@@ -70,6 +70,7 @@
   flex-direction: column;
   justify-content: space-around;/*ocupar todo espaco disponivel */
   max-width: 300px;
+  padding-left: 2rem;
 }
 
 #add-to-list {
