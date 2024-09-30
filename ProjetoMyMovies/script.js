@@ -5,7 +5,8 @@ const movieYear = document.getElementById("movie-year");
 const movieListContainer = document.getElementById('movie-list');
 
 //criar lista(funcao addToList no final)
-let movieList = [];
+// let movieList = [];
+let movieList = JSON.parse(localStorage.getItem('movieList')) ?? [];
 
 
 
@@ -83,6 +84,19 @@ function removeFilmFromList(id) {
 //pega filme e verifica se o id é diferente 
   movieList = movieList.filter(movie => movie.imdbID != id);
   document.getElementById(`movie-card-${id}`).remove();
+  updateLocalStorage();
+
+}
+
+//funcao que atualiza a lista no localStorage quando adicionar o remover filme
+//tem que fazer a chamada dela nas funcoes de remover e adicionar filme
+function updateLocalStorage() {
+  localStorage.setItem('movieList', JSON.stringify(movieList));
+
+}
+
+for (const movieInfo of movieList) {
+  updateUI(movieInfo);
 
 }
 

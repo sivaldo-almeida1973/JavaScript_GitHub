@@ -22,6 +22,7 @@ function addCurrentMovieToList() {
   }
   addToList(currentMovie);  //adiciona o filme atual a lista
   updateUI(currentMovie);  //atualiza a interface
+  updateLocalStorage();//chamada da funcao 
   closeModal();
 
 
