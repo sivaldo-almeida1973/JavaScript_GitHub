@@ -1,9 +1,11 @@
 console.log(1);
 
 //funcao assincrona
-setTimeout(write2OnConsole, 2000);
-console.log(3);
+const result = setTimeout(write2OnConsoleAndReturnString, 2000);
+console.log(result);
 
-function write2OnConsole() {
+
+function write2OnConsoleAndReturnString() {
   console.log(2);
+  return 'Procedure Completed'
 }
