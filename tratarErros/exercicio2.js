@@ -15,4 +15,8 @@ function  tratarErroFuncaoInexistente() {
 
 }
 
+// function funcaoInexistente() {
+//   console.log("A funcao agora existe!")
+// }
+
 tratarErroFuncaoInexistente();
