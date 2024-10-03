@@ -17,9 +17,8 @@
 
 console.log(1);
 
-//funcao assincrona
-const result =
- setTimeout(() => write2OnConsoleAndReturnString((message) => {
+
+const result = setTimeout(() => write2OnConsoleAndReturnString((message) => {
   console.log(message);
   console.log(message + "mensagem escrita no console por uma segunda vez!")
  }), 2000);
