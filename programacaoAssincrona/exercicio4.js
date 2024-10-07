@@ -7,10 +7,11 @@ const p1 = new Promise((resolve) => {
 
 const p2 = new Promise((resolve) => {
   setTimeout(() => resolve('Mundo!'), 2000);
-})
+});
 
 p1.then((result1) =>
 p2.then((result2) => {
   console.log(`${result1} , ${result2}`);
 
-}))
+}));
+
