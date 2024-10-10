@@ -40,10 +40,7 @@ class Stopwatch {
       stringNumber = `0${stringNumber}`;
 
     }
-
     return stringNumber;
-
-
   }
 
 }
