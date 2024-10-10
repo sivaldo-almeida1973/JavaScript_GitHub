@@ -4,19 +4,21 @@ class Stopwatch {
 
   // constructor() {  }//construtor padrao,nao é obrigado usar
 
-  start() {
+  start(callback = () => {}) {
     this.#intervalId = setInterval(() => {
       this.#elapsedTimeInSeconds++;
-      console.log(this.elapsedTime);
+      callback();
     }, 1000);
   }
 
-  stop() {
+  stop(callback = () => {}) {
     clearInterval(this.#intervalId);
+    callback();
   }
 
-  reset() {
+  reset(callback = () => {}) {
     this.#elapsedTimeInSeconds = 0;
+    callback();
   }
 
   get elapsedTime() {
