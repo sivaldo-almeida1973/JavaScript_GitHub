@@ -7,7 +7,7 @@ class Stopwatch {
   start() {
     this.intervalId = setInterval(() => {
       this.elapsedTimeInSeconds++;
-      console.log(Stopwatch.formatTime(this.elapsedTimeInSeconds));
+      console.log(this.elapsedTime);
     }, 1000);
   }
 
@@ -17,6 +17,10 @@ class Stopwatch {
 
   reset() {
     this.elapsedTimeInSeconds = 0;
+  }
+
+  get elapsedTime() {
+    return Stopwatch.formatTime(this.elapsedTimeInSeconds);
   }
 
   static formatTime(timeInSeconds) {
