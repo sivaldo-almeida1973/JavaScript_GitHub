@@ -51,11 +51,34 @@ class Stopwatch {
 
 }
 
-//Abstração
+//referencia ao 3 botoes
+
+const startBtn = document.getElementById('start')
+const stoptBtn = document.getElementById('stop')
+const resetBtn = document.getElementById('reset')
+const stopwatchDisplay = document.getElementById('stopwatch-display');
+
+//atualiza o display
+function updateDisplay() {
+  stopwatchDisplay.innerText = sw1.elapsedTime;
+}
+
 
 const sw1 = new Stopwatch();
-sw1.start();
-sw1.elapsedTime = 20;
+
+startBtn.addEventListener('click', () => {
+  sw1.start(updateDisplay);
+  
+});
+
+
+stoptBtn.addEventListener('click', () => {
+  sw1.stop();
+});
+
+resetBtn.addEventListener('click', () => {
+  sw1.reset(updateDisplay);
+})
 
 
 // console.log(sw1)

@@ -15,18 +15,75 @@
   --body-background-color: #93d7fc;
 }
 
+@media (max-width: 600px) {
+  :root {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  :root {
+    font-size: 7px;
+  }
+}
+
+button {
+  all:unset; /*retira definicoes padroes do button*/
+  cursor: pointer;
+  border: 3px solid var(--stopwatch-light-color);
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: var(--stopwatch-secondary-color);
+  color: var(--stopwatch-primary-color);
+}
+
+button.secondary-button {
+  background-color: var(--stopwatch-primary-color);
+  color: var(--stopwatch-secondary-color);
+}
+
+button:hover {
+  background-color: var(--stopwatch-secondary-shade);
+}
+
+
+
+button.secondary-button :hover {
+  background-color: var(--stopwatch-primary-shade);
+}
+
+button:focus {
+  border: 3px solid #000000; /* tab*/
+}
+
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100dvh;
   background-color: var(--body-background-color);
+  font-size: 3rem;
+}
+#stopwatch-wrapper {
+  background-color: var(--stopwatch-primary-color);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.button-box {
+  margin: 1rem 0 0.5rem 0;
+
 }
 
 #stopwatch-display {
   font-family: 'Major Mono Display', 'Orbitron';
   background-color: #000000;
   color: #ffffff;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  border-radius: 10px;
 
 }
 
