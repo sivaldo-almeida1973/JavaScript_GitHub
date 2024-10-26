@@ -16,7 +16,7 @@ console.log('Deletado:',eliminatedValue);
 
 const list2 = [9,10,11,12,13];
 
-//jntar as duas listas
+//juntar as duas listas
 console.log(list.concat(list2));
 
 //list original não altera
