@@ -11,7 +11,7 @@
 
 
 //palavra function pode não existir , na funcao anonima, para issso usar varivel para a funcao
-const variableThatStoreFunctio = function(message) {
+const variableThatStoreFunction = function(message) {
   console.log(message);
   return undefined
 }
@@ -30,8 +30,8 @@ const variableThatStoreFunctio = function(message) {
 
 // arrow function com um parametro não precisa ter ()
 // com 2 parametros ou sem parametros obrigado ter ()
-
-const writeMessageOnConsoleAndReturnTwo = message => {
+//funcao anonima(arrow function)
+const writeMessageOnConsoleAndReturnTwo = (message) => {
   console.log(message);
   return 2;
 }
@@ -64,3 +64,6 @@ const arrowFunctionQueRetornaObjeto = () => {
     nome: 'Sivaldo vieira',
   }
 }
+
+
+console.log(arrowFunctionQueRetornaObjeto());
