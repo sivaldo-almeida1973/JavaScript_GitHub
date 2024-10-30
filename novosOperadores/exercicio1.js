@@ -15,3 +15,10 @@ const cidades = clientes
 
 console.log(cidades);
 
+
+//refatoracao
+const cidadesRefator = clientes
+.map(cliente => cliente.enderecos?.map(endereco => endereco.cidade) ?? []) //mapeia cada cliente para a lista de cidades
+.reduce((acumulador, cidadesCliente) => acumulador.concat(cidadesCliente), []);//une todos os arrays de cidades em um só
+
+console.log(cidadesRefator);
