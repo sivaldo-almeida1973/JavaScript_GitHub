@@ -1,10 +1,10 @@
 //ES Modules, usar a extensao .mjs para O Node
 
-import { Car,  numberOfTires } from "./car.js";
+import ClasseCarro,{ numberOfTires } from "./car.js";
 
 function createCars() {
-  const car1 = new Car('Toyota', 'Corolla', 2022);
-  const car2 = new Car('Toyota', 'Corolla', 2022);
+  const car1 = new ClasseCarro('Toyota', 'Corolla', 2022);
+  const car2 = new ClasseCarro('Toyota', 'Corolla', 2022);
 
 
   car1.turnOn();
@@ -22,6 +22,6 @@ function createCars() {
 
 createCars();
 
-// const buttonElement = document.getElementById('run-fucntion');
+// const buttonElement = document.getElementById('run-function');
 
 // buttonElement.addEventListener('click', createCars);

@@ -3,7 +3,7 @@
 export const numberOfTires = 4;
 
 
-export class Car {
+export default class Car {
   constructor(brand, model, year) {
     this.brand = brand;
     this.model = model;
@@ -31,3 +31,6 @@ export class Car {
 
 // CommonJS, exportar o codigo que quero passar
 // module.exports = Car;
+
+//export {Car, numberOfTires};
+//export default Car;
