@@ -14,5 +14,11 @@ function multiply(a, b) {
 }
 
 
-//exportação
-export { add, subtract, multiply};
+//---------------exportação 3 tipos--------------
+
+// export { add, subtract, multiply};
+
+// export default{ add, subtract, multiply};
+
+const math = {add, subtract, multiply};
+export default math;

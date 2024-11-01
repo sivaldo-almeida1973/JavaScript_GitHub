@@ -3,8 +3,10 @@
 // process.env.NODE_ENV = 'development';
 
 //importação das funções comES Modules
-import * as mathOperations from "./mathOperations.js";
+// import * as mathOperations from "./mathOperations.js";
 
+//outra forma de importar
+import math from "./mathOperations.js"
 
 
 //simulação de input /entrada do usuário
@@ -12,9 +14,15 @@ const a = 10;
 const b = 5;
 
 //usando a s funções importadas para calcular
-const sum = mathOperations.add(a, b);
-const difference = mathOperations.subtract(a, b);
-const product = mathOperations.multiply(a, b);
+// const sum = mathOperations.default.add(a, b);
+// const difference = mathOperations.default.subtract(a, b);
+// const product = mathOperations.default.multiply(a, b);
+
+
+//outra forma de importar
+const sum = math.add(a, b);
+const difference = math.subtract(a, b);
+const product = math.multiply(a, b);
 
 
 //exibir so resultados
