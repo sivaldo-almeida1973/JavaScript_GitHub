@@ -1,3 +1,8 @@
+//Simular o ambiente
+// process.env.NODE_ENV = 'production';
+process.env.NODE_ENV = 'development';
+
+
 //importar as funções do arquivo mathOperations.js
 const mathOperations = require('./mathOperations');
 
@@ -15,3 +20,10 @@ const difference = mathOperations.subtract(a, b);
 console.log(`A soma de ${a} e ${b}: ${sum}`)
 console.log(`A subtração de ${a} e ${b}: ${difference}`)
 
+
+//Se a função multiply estiver disponível, use-a.
+if (mathOperations.multiply) {//se ela existe
+  const product = mathOperations.multiply(a, b);
+  console.log(`Muçtiplicação de ${a} e ${b}: ${product}`);
+
+}
