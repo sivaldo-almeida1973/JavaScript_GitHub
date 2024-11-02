@@ -6,3 +6,13 @@ export function addUser(user) {
 }
 
 
+//criar função de deletar
+export function deleteUser(user) {
+  document.getElementById("message").textContent = `Usuário ${user} deletado com sucesso!`
+}
+
+//Função de atualizar
+export function updateUser(user, newInfo) {
+  document.getElementById("message").textContent = `Usuário: ${user} nova informação: ${newInfo}!`;
+
+}
