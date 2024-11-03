@@ -10,3 +10,23 @@ const produtos = [
 
 
 const categoriaDesejada = 'Vestuário';
+
+
+function  filtrarPorCategoria(produtos, categoria) {
+  return produtos.filter(function(produto) {
+    return produto.categoria === categoria;
+
+  });
+}
+
+const produtosFiltroTradicional = filtrarPorCategoria(produtos, categoriaDesejada);
+console.log(produtosFiltroTradicional);
+
+
+//Arrow function-------------------------------------------
+const categoriaDesejada2 = 'Calçados';
+
+const filtrarPorCategoriaArrow = (produtos, categoria) => produtos.filter((produto) => produto.categoria === categoria);
+
+console.log(filtrarPorCategoriaArrow(produtos, categoriaDesejada2));
+
