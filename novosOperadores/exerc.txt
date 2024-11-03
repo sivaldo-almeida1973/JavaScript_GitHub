@@ -1,0 +1,5 @@
+Exercício 3: Você está criando uma função para calcular o total de vendas de uma série de
+transações. Use parâmetros rest para aceitar uma lista de valores e o método reduce para
+somar todos os valores.
+Exemplo de Entrada: // 100, 200, 300, 400, 500;
+Exemplo de Saída: // 1500;
